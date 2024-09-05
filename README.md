@@ -21,7 +21,7 @@ If we repeated this process a bunch of times, the mean value $\hat{y}$ will be $
 
 Unfortunately, we rarely have *enough* data, let alone *enough data for each value of* $x$, so we'll need to figure out another way to try and zero out that $\epsilon$ term.
 
-We didn't assume much about $f(x)$, but we did assume that it's continuous.  This means that $f(x_1)$ should be close to $f(x_0)$ if $x_1$ and $x_0$ are close, and $y_1$ might have something helpful to say about $f(x_0)$.  From what I've seen, a lot of machine learning and statistics comes down to figuring out how best to express that "something helpful". 
+We didn't assume much about $f(x)$, but we did assume that it's continuous.  This means that $f(x_1)$ should be close to $f(x_0)$ if $x_1$ and $x_0$ are close, and $y_1$ might have something helpful to say about $f(x_0)$.  A lot of machine learning and statistics comes down to figuring out how best to express that "something helpful". 
 
 Kernel smoothing is a simple idea.  In order to estimate $f(x_0)$ for a given value of $x$, instead of taking the average of many values of $y$ at $x_0$ (because we don't have this kind of data available), we take the *weighted* average of many $y_i$ values stemming from observations $(x_i, y_i)$, where the weighting of each $y_i$ is determined by the distance between $x_0$ and $x_i$.  In general, the closer away $x_i$ is to $x_0$, the more it contributes to the average.  This makes sense, because the $f(x_0)$ should be pretty close to $f(x_i)$ in this case.
 
