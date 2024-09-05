@@ -19,7 +19,7 @@ Let's imagine what we could do if we had a lot more data.  In fact, let's assume
 
 If we repeated this process a bunch of times, the mean value $\hat{y}$ will be $f(x_0)$, with variance equal to $\sigma^2/N$, which is small if $N$ is large.  That is, if we have enough data, we can just take a mean of all of the $y$ values for a given $x$, and this should yield a value very close to $f(x)$.
 
-Unfortunately, we rarely have *enough* data, let alone *enough data for each value of $x$*, so we'll need to figure out another way to try and zero out that $\epsilon$ term.
+Unfortunately, we rarely have *enough* data, let alone *enough data for each value of* $x$, so we'll need to figure out another way to try and zero out that $\epsilon$ term.
 
 We didn't assume much about $f(x)$, but we did assume that it's continuous.  This means that $f(x_1)$ should be close to $f(x_0)$ if $x_1$ and $x_0$ are close, and $y_1$ might have something helpful to say about $f(x_0)$.  From what I've seen, a lot of machine learning and statistics comes down to figuring out how best to express that "something helpful". 
 
