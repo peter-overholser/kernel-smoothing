@@ -43,7 +43,7 @@ One early approach to this problem was through the use of Markov chains.  Given 
 
 One obvious issue is that lots of meaningful phrases have no previous occurrences in human history.  For example "Here at Cal Poly Humboldt, Founder's Hall's roof is the same color as the wood of our favorite tree, the mighty ..." most likely has never before been written or uttered.  And yet we all can guess which word comes next.
 
-How do we do this?  Instead of using the mere words to guess which word comes next, we use their meaning.  In other words, we're using *semantics* (meaning) of words rather than their raw symbols. 
+How do we do this?  Instead of using the mere words to guess which word comes next, we use their meaning.  In other words, we're using the *semantics* (meaning) of words rather than their raw symbols. 
 
 Transformers attempt to model semantics through the use of embeddings.  Each word is assigned a vector,  and words which tend to show up in similar contexts are given similar vectors.  Because you can guess a word's meaning by its context, words with similar meanings are also given similar vectors.  The problem here is that words often have many different meanings, and thus a single vector is not adequate to express the range of possible meanings that a word might take on.  This gap between general meaning and contextual meaning serves a similar role to $\epsilon$ in the kernel smoothing discussion above.
 
